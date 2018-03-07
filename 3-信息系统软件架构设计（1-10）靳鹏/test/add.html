@@ -1,0 +1,28 @@
+<html>  
+   <head>
+       <title>我是加法</title>
+       <script>
+           function add()
+             {              	
+                var fir=document.getElementById("1");
+                var sec=document.getElementById("2");
+                var fir_value=parseInt(fir.value);
+                var sec_value=parseInt(sec.value);
+                var sum=fir_value+sec_value;
+                alert(sum);
+             }                
+       </script>
+  </head> 
+
+  <body>
+    <div align="center">
+     <h1> ADD </h1>
+      <form>
+        <input type="text" name="first" id="1" value="" >
+        <input type="text" name="second" id="2" value="">
+        <input type="button" name="sum" value="add" onclick="add()">
+      </form>
+    <div>
+  </body>
+
+</html>

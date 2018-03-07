@@ -1,0 +1,9 @@
+<html>
+  <h1>1111为什么后两句不显示？！</h1>
+  <script>
+    document.write('11啥玩意，不显示？');
+  </script>
+<body>
+  <script  src="E:\桌面（重要！)\333.js"></script>
+</body>
+</html>

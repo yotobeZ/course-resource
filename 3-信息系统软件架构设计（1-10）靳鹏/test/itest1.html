@@ -1,0 +1,64 @@
+
+  <head>
+<script>
+    func1(){
+ var sel1 = document.getElementById("1");
+
+ alert(sel1.name);
+}
+    func2(){
+ var sel2 = document.getElementById("2");
+
+ alert(sel2.name);
+}
+</script>
+</head>
+  <body>
+ <input type="text" size="10" name="hhh1"id="1" value="nijiaosha" onChange="func1()">
+ <input type="password" size="10" name="hhh2"id="2" placeholder="nijiaosha"onChange="func2()">
+ 
+
+单选1 <input type="radio" >
+单选2 <input type="radio" checked="checked">
+<p>今天晚上做什么？</p>
+ 
+学习java<input type="radio" name="activity" value="学习java" > <br/>
+东京热<input type="radio" checked="checked"  name="activity" value="tokyohot" > <br/>
+dota<input type="radio" name="activity" value="dota" > <br/>
+LOL<input type="radio" name="activity"  value="lol"> <br/>
+<p>今天晚上做什么？</p>
+  
+学习java<input type="checkbox" value="学习java" > <br/>
+东京热<input type="checkbox" checked="checked"  name="activity" value="tokyohot" > <br/>
+dota<input type="checkbox" value="dota" > <br/>
+LOL<input type="checkbox" value="lol"> <br/>
+
+
+<select size="1" multiple="multiple">
+ <option >易烊千玺</option>
+ <option >陈伟霆</option>
+ <option >啊？想啥呢</option>
+</select>
+
+<textarea>abc
+def
+</textarea>
+<textarea cols="30" rows="8">123456789012345678901234567890
+1234567890
+1234567890
+1234567890
+1234567890
+1234567890
+1234567890
+1234567890</textarea>
+普通按钮不能提交
+<form action="/study/login.jsp" method="get">
+账号：<input type="text" name="name"> <br/>
+密码：<input type="password" name="password" > <br/>
+<input type="button" value="登陆">
+</form>
+
+
+ </body>
+ 
+</html>

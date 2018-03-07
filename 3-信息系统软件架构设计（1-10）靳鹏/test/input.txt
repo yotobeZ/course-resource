@@ -1,0 +1,4 @@
+<html>
+ <input type="text" size="10" name="hhh" value="nijiaosha">
+ <input type="text" size="10" name="hhh" placeholder="nijiaosha">
+</html>

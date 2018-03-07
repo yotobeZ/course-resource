@@ -1,0 +1,246 @@
+﻿
+<html >
+<head>
+  
+    <link rel="stylesheet" type="text/css"   href="web/js/jquery-easyui-1.4/themes/default/easyui.css" />  
+    <!-- 引入easyUi小图标 -->  
+    <link rel="stylesheet" type="text/css"   href="web/js/jquery-easyui-1js/jquery-easyui-1.4/themes/icon.css" />  
+    <!-- 引入Jquery -->  
+    <script type="text/javascript"   src="web/js/jquery-easyui-1.4/jquery.min.js" charset="utf-8"></script>  
+    <!-- 引入Jquery_easyui -->  
+    <script type="text/javascript"   src="web/js/jquery-easyui-1js/jquery-easyui-1.4/jquery.easyui.min.js" charset="utf-8"></script>  
+    <!-- 引入easyUi国际化--中文 -->  
+    <script type="text/javascript"   src="web/js/jquery-easyui-1js/jquery-easyui-1.4/locale/easyui-lang-zh_CN.js" charset="utf-8"></script>  
+    <script type="text/javascript"   src="web/js/jquery-easyui-1.4/jquery.easyui.patch.js" charset="utf-8"></script> 
+  
+
+	
+    <script type="text/javascript" >
+	 /* 
+	 $(
+	    function (){
+          alert("this is my first!");
+        }
+	  );
+	 */  
+	   
+	   function showInfo(){
+	      
+            $("#gkdw").val()="123456789";
+              
+
+            //$('#gkdw').css('background-color','red');
+
+	      
+	   }
+	</script>
+    
+    
+    <script type="text/javascript">
+       function CheckNull(){
+           
+		   var t;
+           t=baseForm.gkdw.value;
+           if(t==""){
+               //alert("请输入归口管理部门!");
+               //baseForm.gkdw.focus();
+               t=prompt("归口管理部门","请输入归口管理部门");
+			   baseForm.gkdw.value=t;
+               return false;
+           }
+           
+           
+           t=baseForm.zrxm.value;
+           if(t==""){
+               alert("请输入中心主任姓名!");
+               baseForm.zrxm.focus();
+               return false;
+           }
+           
+           t=baseForm.zrsj.value;
+           if(t==""){
+               alert("请输入中心主任手机号码!");
+               baseForm.zrsj.focus();
+               return false;
+           }
+          
+           t=baseForm.zrdh.value;
+           if(t==""){
+               alert("请输入中心主任电话号码!");
+               baseForm.zrdh.focus();
+               return false;
+           }
+           
+           t=baseForm.lxxm.value;
+           if(t==""){
+               alert("请输入联系人姓名!");
+               baseForm.lxxm.focus();
+               return false;
+           }
+           
+           t=baseForm.lxdh.value;
+           if(t==""){
+               alert("请输入联系人电话!");
+               baseForm.lxdh.focus();
+               return false;
+           }
+           
+           t=baseForm.lxcz.value;
+           if(t==""){
+               alert("请输入传真号码!");
+               baseForm.lxcz.focus();
+               return false;
+           }
+           
+           t=baseForm.lxqq.value;
+           if(t==""){
+               alert("请输入联系人QQ!");
+               baseForm.lxqq.focus();
+               return false;
+           }
+           
+           t=baseForm.zxdz.value;
+           if(t==""){
+               alert("请输入中心通信地址!");
+               baseForm.zxdz.focus();
+               return false;
+           }
+                      
+           t=baseForm.yzbm.value;
+           if(t==""){
+               alert("请输入邮政编码!");
+               baseForm.yzbm.focus();
+               return false;
+           } 
+           
+           t=baseForm.zcsj.value;
+          
+           if(t==""){
+               alert("请输入注册时间!");
+               baseForm.zcsj.focus();
+               return false;
+           }  
+           t=baseForm.zczj.value;
+           if(t==""){
+               alert("请输入注册资金!");
+               baseForm.zczj.focus();
+               return false;
+           }          
+           return true;
+       }
+	   function fuzhi(){
+	    baseForm.zczj.value = "5";
+	   }
+    </script>
+</head>
+<body onload="init()">
+
+  <div align="center"  style="position: absolute; top: 100px; left: 0px; right: 0px; bottom: 0px;">
+    
+    
+    <form id="baseForm" action=" " method="post" onsubmit="return CheckNull()">
+      <table   border="1px" > <tr>
+          <td colspan="2" width="200" style="background:#DBDBDB">中心名称</td>
+          <td colspan="4" width="600">
+            <select name="zhxmch" id="zhxmch" style="width:400px" value="">
+			    <option value = "------------------">---------请选择---------</option>
+			    <option value = "合肥工大生产力促进中心">合肥工大生产力促进中心</option>
+				<option value = "中科大生产力促进中心">中科大生产力促进中心</option>
+				<option value = "安大生产力促进中心">安大生产力促进中心</option>
+				<option value = "安农大生产力促进中心">安农大生产力促进中心</option>
+			</select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" width="200" style="background:#DBDBDB">中心所在领域</td>
+          <td colspan="4" width="600">
+            <input type="radio" name="szly" value="综合性" checked="checked" />综合性
+            <input type="radio" name="szly" value="专业性"/>专业性
+            <input type="radio" name="szly" value="行业性"/>行业性
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" width="200" style="background:#DBDBDB">归口管理部门</td>
+          <td colspan="4" width="600">
+            <input type="text" id="gkdw" name="gkdw" style="width:400px"/>
+          </td>
+        </tr>
+        <tr>  
+          <td colspan="2" width="200" style="background:#DBDBDB">经济类型</td>
+          <td colspan="4" width="600">
+            <input type="radio" name="jjlx" value="企业法人" checked="checked"/>企业法人
+            <input type="radio" name="jjlx" value="事业法人"/>事业法人
+            <input type="radio" name="jjlx" value="民间组织"/>民间组织
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" width="200" style="background:#DBDBDB">主要业务领域</td>
+          <td colspan="4" width="600">            
+            <input name="lst" type="checkbox" value="信息咨询" />信息咨询  
+            <input name="lst" type="checkbox" value="技术服务" />技术服务 
+            <input name="lst" type="checkbox" value="技术转移" />技术转移 
+            <input name="lst" type="checkbox" value="管理咨询" />管理咨询
+            <input name="lst" type="checkbox" value="培训交流" />培训交流
+            <input name="lst" type="checkbox" value="接受委托" />接受委托
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" width="200" style="background:#DBDBDB">业务是否独立核算</td>
+          <td colspan="4" width="600">
+            <input type="radio" name="dlhs" value="是" checked="checked"/>是
+            <input type="radio" name="dlhs" value="否"/>否
+          </td>          
+        </tr>
+        <tr>
+          <td  rowspan="2" colspan="2" width="200" style="background:#DBDBDB">中心主任</td>
+          <td style="background:#DBDBDB">姓名</td>
+          <td> <input  type="text" id="zrxm" name="zrxm"/></td>
+          <td style="background:#DBDBDB">手机</td>
+          <td><input type="text" id="zrsj" name="zrsj"/></td>
+         </tr>
+         <tr>
+          <td style="background:#DBDBDB">电话</td>
+          <td colspan="3"><input type="text" id="zrdh" name="zrdh"/></td>
+        </tr>
+        <tr>
+          <td rowspan="2" colspan="2"  width="200" style="background:#DBDBDB">联系人</td>
+          <td style="background:#DBDBDB">姓名</td>
+          <td><input  type="text" id="lxxm" name="lxxm"/></td>
+          <td style="background:#DBDBDB">电话</td>
+          <td><input type="text" id="lxdh" name="lxdh"/></td>
+        </tr>
+        <tr>
+          <td style="background:#DBDBDB">传真</td>
+          <td ><input type="text" id="lxcz" name="lxcz"/></td>
+          <td style="background:#DBDBDB">QQ</td>
+          <td ><input type="text" id="lxqq" name="lxqq"/></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="background:#DBDBDB">中心通讯地址</td>
+          <td colspan="4">
+            <input type="text" id="zxdz" name="zxdz" style="width:400px"/>
+          </td>
+        </tr>
+        <tr>  
+           <td colspan="2" width="200" style="background:#DBDBDB">邮政编码</td>
+           <td colspan="4"><input type="text" id="yzbm" name="yzbm" style="width:400"/></td>
+        </tr>
+        <tr>          
+          <td colspan="2" style="background:#DBDBDB">注册时间</td>
+          <td ><input type="text" id="zcsj" name="zcsj"/></td>
+          <td style="background:#DBDBDB">注册资金</td>
+          <td colspan="2"><input type="text" id="zczj" name="zczj"/>万元</td>
+        </tr>
+             
+      </table>  
+      <table>
+        <tr>
+          <td><input type="submit" name="sbm" value="添&nbsp&nbsp&nbsp&nbsp加" style="width:150px;height:30px;font-size:16px"></td>
+          <td><input type="button" name="btn" value="编辑框赋值" style="width:150px;height:30px;font-size:16px" onclick = "fuzhi()"></td>          
+          <td><input type="button" name="btn" value="显示相关信息" style="width:150px;height:30px;font-size:16px" onclick = "showInfo()"></td>       
+		</tr>
+      </table>
+    </form>
+  </div>
+</body>
+</html>

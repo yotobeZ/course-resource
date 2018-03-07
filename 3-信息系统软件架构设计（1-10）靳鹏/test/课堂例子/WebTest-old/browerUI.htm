@@ -1,0 +1,56 @@
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+
+<html>
+<head>
+    
+    <link rel="stylesheet" type="text/css"   href="js/jquery-easyui-1.4/themes/default/easyui.css" />  
+    <!-- 引入easyUi小图标 -->  
+    <link rel="stylesheet" type="text/css"   href="js/jquery-easyui-1.4/themes/icon.css" />  
+    <!-- 引入Jquery -->  
+    <script type="text/javascript"   src="js/jquery-easyui-1.4/jquery.min.js" charset="utf-8"></script>  
+    <!-- 引入Jquery_easyui -->  
+    <script type="text/javascript"   src="js/jquery-easyui-1.4/jquery.easyui.min.js" charset="utf-8"></script>  
+    <!-- 引入easyUi国际化--中文 -->  
+    <script type="text/javascript"   src="js/jquery-easyui-1.4/locale/easyui-lang-zh_CN.js" charset="utf-8"></script>  
+    <script type="text/javascript"   src="js/jquery-easyui-1.4/jquery.easyui.patch.js" charset="utf-8"></script> 
+</head>
+  
+  <script type="text/javascript" >  
+    
+  </script>   
+  
+</head>
+  
+<body>
+  
+	<div style="margin:20px 0;"></div>
+	<table class="easyui-datagrid" title="学生基本信息浏览" style="width:700px;height:250px"
+			data-options="rownumbers:true,singleSelect:true,url:'datagrid_data1.json',method:'get',toolbar:toolbar">
+		<thead>
+			<tr>
+				<th data-options="field:'itemid',width:100">姓名</th>
+				<th data-options="field:'productid',width:100">性别</th>
+				<th data-options="field:'listprice',width:100">学院</th>
+				<th data-options="field:'unitcost',width:100">专业</th>
+				
+			</tr>
+		</thead>
+	</table>
+	<script type="text/javascript">
+		var toolbar = [{
+			text:'增加',
+			iconCls:'icon-add',
+			handler:function(){alert('add')}
+		},{
+			text:'修改',
+			iconCls:'icon-cut',
+			handler:function(){alert('cut')}
+		},'-',{
+			text:'删除',
+			iconCls:'icon-cancel',
+			handler:function(){alert('save')}
+		}];
+	</script> 
+</body>
+</html>

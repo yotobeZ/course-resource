@@ -1,0 +1,6 @@
+<html>
+<script>
+啥玩意
+</script>
+<script  src="E:\桌面（重要！)\333.js"/>
+</html>

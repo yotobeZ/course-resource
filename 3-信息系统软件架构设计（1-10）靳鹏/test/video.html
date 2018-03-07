@@ -1,0 +1,58 @@
+<html version="1.0"?>
+
+<!-- 
+    Video Settings
+-->
+<video>
+    <!-- Set Screen Mode: 
+    
+         0 is windowed, 
+         1 is full-screen
+         2 is full-screen stretched, no borders. (Aspect ratio will be lost. Scanlines will be disabled.)
+    -->
+    <mode>0</mode>
+
+    <!-- 
+        Windowed Mode Settings 
+        Scale: Scale or zoom factor for window mode. 1 is original size. 
+    -->
+    <window>
+        <scale>1</scale>
+    </window>
+
+    <!-- 
+        Scanline intensity.
+        0   = No scanlines
+        100 = Solid black
+        
+        A value of 35 looks good on my LCD monitor.
+        
+        Note that scanlines require a scale factor of 2 or more. 
+        Scanlines do not work in full-screen stretch mode.
+        Scanlines may result in some borders around the screen in full-screen mode.
+    -->
+    <scanlines>0</scanlines>
+
+    <!-- FPS 
+         0 = 30    FPS. Optimized Mode       (Slow computers)
+         1 = 30/60 FPS. Original Game Mode.  (The original experience)
+         2 = 60    FPS. Smooth Mode.         (Full 60fps)
+    -->
+    <fps>0</fps>
+    
+    <!-- Enable FPS Counter -->
+    <fps_counter>0</fps_counter>
+
+    <!-- Disable FPS control -->
+    <fps_cap_disable>1</fps_cap_disable>
+    
+    <!-- Enhanced Widescreen Mode -->
+    <widescreen>1</widescreen>
+    
+    <!-- Higher Internal Resolution. Better Sprite Scaling, but has a performance hit. 
+         Disable for original experience. -->
+    <hires>0</hires>
+    
+    <!-- Open GL Filtering for Scaling. 0 = Nearest Neighbour. 1 = Linear -->
+    <filtering>1</filtering>
+</video>

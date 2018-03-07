@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>用户表单验证</title>
+  <script>
+    function changeValue(){
+      var userName=document.getElementById("userName"); //通过Id获得对象userName;
+ 
+      userName.value=userName.value.toUpperCase();  //将对象的值进行大小写的转换赋值给当前对象的值；
+ 
+    }
+  </script>
+</head>
+<body>
+  <form name="myform" method="POST" action="" onsubmit="return checkForm();">
+   <!--userName: 这个是显示出的输入框前的文字，而不是input里的name或是id-->
+    userName:<input type="text" name="userName" value="" id="userName" onchange="changeValue();" />
+    <input type="submit" name="" value="用户注册" />
+  </form>
+</body>
+</html>

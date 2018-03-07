@@ -1,0 +1,49 @@
+﻿<html>
+   <meta charset="UTF-8"/>
+   <head>
+    <script>
+	  function sel2Show(){
+	    var sel1 = document.getElementById("sel1");
+                //alert(sel1),此句显示[object HTMLSelectElement]
+		var index =  sel1.selectedIndex;
+		//alert(index); 选安徽此值是1，selectedIndex为何物？
+		var sel1Value = sel1.options[index].value;
+               // alert(sel1Value);  选安徽此值是1
+		var sel2 = document.getElementById("sel2");
+                //上面这句注释掉仍可正常运行，这句作用是？
+		//alert(sel2),此句显示[object HTMLSelectElement]
+		//alert(sel1Value);
+		
+		
+		if (sel1Value==1){
+		    sel2.options.length=0;
+			sel2.options.add(new Option("------------","------------"));
+			sel2.options.add(new Option("合肥","合肥"));
+			sel2.options.add(new Option("芜湖","芜湖"));
+		}
+		else{
+		    sel2.options.length=0;
+			sel2.options.add(new Option("------------","------------"));
+			sel2.options.add(new Option("南京","南京"));
+			sel2.options.add(new Option("无锡","无锡"));
+		}
+	  }
+	</script>
+  </head>
+
+  <body>
+    <div align="center">
+      <h1> onSelect事件示例</h1>
+	  <select id="sel1" onchange="sel2Show()">
+	    <option>------------</option>
+		<option value="1"> 安徽 </option>
+		<option value="2"> 江苏 </option>
+	  </select>
+	  
+	  <select id="sel2">
+	    <option>------------</option>		
+	  </select>
+	  
+	</div>	
+  </body>
+</html>
